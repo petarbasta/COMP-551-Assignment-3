@@ -7,7 +7,7 @@ from PIL import Image
 from scipy import ndimage
 import tensorflow as tf
 
-#from tensorflow.python.framework import ops
+from tensorflow.python.framework import ops
 from cnn_utils import *
 
 np.random.seed(1)
@@ -89,7 +89,7 @@ class CNN:
 
     # Using mini-batch gradient descent for training
     def fit_model(self, X_train, Y_train, X_test, Y_test):
-        ops.reset_default_graph()  # To rerun model without overwriting tf variables
+        #ops.reset_default_graph()  # To rerun model without overwriting tf variables
         tf.random.set_seed(1)  # To keep results consistent (tf seed)
         seed = 3  # To keep results consistent (np seed)
 
